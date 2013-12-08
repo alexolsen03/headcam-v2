@@ -1,0 +1,17 @@
+<div class="wrapper">
+	<div class="text-right">
+		<% if current_user %>
+			<%= link_to signout_path, id: "sign_out" do %>
+				<span class="subtle-text">Not <%= current_user.name %>?</span>
+			<% end %>
+		<% else %>
+			<span class="subtle-text">Not signed in?</span>
+			<%= link_to "/auth/facebook", id: "sign_in" do %>
+				<i class="fa fa-facebook"></i>
+			<% end %>
+			<%= link_to "/auth/twitter", id: "sign_in" do %>
+				<i class="fa fa-twitter"></i>
+			<% end %>
+		<% end %>
+	</div>
+</div>
