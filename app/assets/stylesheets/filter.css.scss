@@ -1,0 +1,72 @@
+$nonHover: #cdcdcd;
+$hover: #888;
+$popItColor: #FF0000;
+
+form.filter-form{
+	margin-top: 110px;
+	width: 210px;
+	border-right: 1pt solid red;
+	overflow: hidden;
+	font-size: 11px;
+	font-family: Calibri;
+
+	div.space{
+		margin: 12px 0px;
+		color: $nonHover;
+		-webkit-transition: all 0.2s linear;
+
+		.filter-label{
+			letter-spacing: 1px;
+			text-transform: lowercase;
+		}
+
+		.filter-text{
+			margin: 0px 6px;
+			border: 1pt solid transparent;
+			color: $popItColor;
+			-webkit-transition: all 0.2s linear;
+			font-size: 11px;
+			max-width: 100px;
+		}
+
+		.star-holder{
+			height: 0px;
+			overflow: hidden;
+		}
+
+		.star-replace{
+			border: 1pt solid transparent;
+		}
+
+		.input-int{
+			width: 20px;
+			overflow: hidden;
+		}
+	}
+
+	div.space:hover{
+		color: $hover;
+		cursor: pointer;
+		-webkit-transition: all 0.3s linear;
+
+		.filter-label{
+			letter-spacing: 1px;
+			text-transform: lowercase;
+		}
+
+		.filter-text{
+			border: 1pt solid $hover;
+			-webkit-transition: all 0.3s linear;
+		}
+
+		.star-holder{
+			height: 12px;
+			-webkit-transition: all 0.3s linear;
+		}
+
+		.star-replace{
+			width: 0px;
+			border: 1pt solid transparent;
+		}
+	}
+}

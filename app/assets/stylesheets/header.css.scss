@@ -1,0 +1,35 @@
+$popItDark: #555;
+$popItColor: #FF0000;
+
+div.headerfull{
+	border-bottom: 2px solid #fcfcfc;
+
+	div.header{
+		padding: 10px 0px;
+		position: relative;
+		overflow: visible;
+
+		div.logo-area{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100px;
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+			background-color: #fff;
+			border-left: 2px solid $popItDark;
+			border-right: 2px solid $popItDark;
+			border-bottom: 2px solid $popItDark;
+
+			h1{
+				font-size: 32px;
+				color: $popItColor;
+			}
+
+			h1:first-letter{
+				color: #333;
+			}
+		}
+	}
+}

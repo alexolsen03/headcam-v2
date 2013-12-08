@@ -9,8 +9,13 @@
 <body>
 	<%= render 'layouts/header' %>
 	<div class="wrapper">
-		<div>
-			<%= yield %>
+		<div class="content">
+			<div class="go-left">
+				<%= render 'layouts/filter' %>
+			</div>
+			<div class="go-left">
+				<%= yield %>
+			</div>
 		</div>
 	</div>
 

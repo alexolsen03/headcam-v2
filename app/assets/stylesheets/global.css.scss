@@ -1,0 +1,39 @@
+$subtleColor: #888;
+
+div.wrapper{
+	width: 100%;
+
+	div{
+		width: 1100px;
+		margin: 0px auto;
+	}
+}
+
+.downsize{
+	text-transform: lowercase;
+}
+
+.go-left{
+	float: left;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.subtle-text{
+	color: $subtleColor;
+}
+
+a .subtle-text:hover{
+	color: #d6d6d7;
+}
+
+.soc-media-icon{
+	color: #888;
+	margin: 0px 2px;
+}
+
+.soc-media-icon:hover{
+	color: #b3aab4;
+}
