@@ -1,12 +1,16 @@
 <form action="" method="POST" class="filter-form">
 	<div class="space">
 		<label for="filterWhere" class="filter-label">Find videos in</label>
-		<input id="filterWhere" type="text" class="filter-text" />
+		<span id="filterWhere" class="country-active"></span>
+		<div class="value-holder">
+			<input type="text" id="filterWhereInput" class="filter-text" />
+			<i id="addCountryBtn" class="fa fa-plus-circle"></i>
+		</div>
 	</div>
 	<div class="space">
 		<label for="filterHowHigh" class="filter-label">With a rating of at least</label>
-		<input id="filterHowHigh" type="text" class="filter-text input-int star-replace" />
-		<div class="star-holder">
+		<span id="filterHowHigh" class="filter-val"></span>
+		<div class="value-holder">
 			<i id="star1" class="fa fa-star"></i>
 			<i id="star2" class="fa fa-star"></i>
 			<i id="star3" class="fa fa-star"></i>
@@ -16,7 +20,16 @@
 	</div>
 	<div class="space">
 		<label for="filterWhen" class="filter-label">Uploaded in the last</label>
-		<input id="filterWhen" type="text" class="filter-text input-int" /> 
+		<span id="filterWhen" class="days-active"></span>
 		<label for="filterWhen" class="filter-label">days</label>
+		<div class="value-holder">
+			<ul>
+				<li>1</li>
+				<li>7</li>
+				<li>30</li>
+				<li>365</li>
+				<li>All</li>
+			</ul>
+		</div>
 	</div>
 </form>

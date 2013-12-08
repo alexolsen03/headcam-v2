@@ -2,11 +2,11 @@ $subtleColor: #888;
 
 div.wrapper{
 	width: 100%;
+}
 
-	div{
-		width: 1100px;
-		margin: 0px auto;
-	}
+div.wrapper > div{
+	width: 1100px;
+	margin: 0px auto;
 }
 
 .downsize{
@@ -17,12 +17,20 @@ div.wrapper{
 	float: left;
 }
 
+.go-right{
+	float: right;
+}
+
 .text-right{
 	text-align: right;
 }
 
 .subtle-text{
 	color: $subtleColor;
+}
+
+.small-text{
+	font-size: 11px;
 }
 
 a .subtle-text:hover{
@@ -32,8 +40,13 @@ a .subtle-text:hover{
 .soc-media-icon{
 	color: #888;
 	margin: 0px 2px;
+	font-size: 11px;
 }
 
 .soc-media-icon:hover{
 	color: #b3aab4;
+}
+
+.clearme{
+	clear: both;
 }

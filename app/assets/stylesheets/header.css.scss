@@ -21,6 +21,7 @@ div.headerfull{
 			border-left: 2px solid $popItDark;
 			border-right: 2px solid $popItDark;
 			border-bottom: 2px solid $popItDark;
+			z-index: 2;
 
 			h1{
 				font-size: 32px;
@@ -30,6 +31,14 @@ div.headerfull{
 			h1:first-letter{
 				color: #333;
 			}
+		}
+
+		div.sign-up-wrapper{
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			height: 100%;
+			line-height: 38px;
 		}
 	}
 }

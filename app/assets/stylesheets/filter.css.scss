@@ -3,59 +3,77 @@ $hover: #888;
 $popItColor: #FF0000;
 
 form.filter-form{
-	margin-top: 110px;
-	width: 210px;
-	border-right: 1pt solid red;
 	overflow: hidden;
 	font-size: 11px;
 	font-family: Calibri;
+	text-align: center;
+	width: 800px;
+	margin: 0px auto;
 
 	div.space{
-		padding: 12px 0px;
 		position: relative;
 		display: inline-block;
+		margin: 0px 10px;
 		color: $nonHover;
+		text-align: center;
 		-webkit-transition: all 0.2s linear;
+		min-width: 150px;
+		min-height: 19px;
 
-		.filter-label{
-			letter-spacing: 1px;
-			text-transform: lowercase;
+		span{
+			min-width: 18px;
+			display: inline-block;
 		}
 
 		.filter-text{
-			margin: 0px 6px;
-			border: 1pt solid transparent;
 			color: $popItColor;
+			border: 1pt solid transparent;
 			-webkit-transition: all 0.2s linear;
 			font-size: 11px;
 			max-width: 100px;
 		}
 
-		.star-holder{
-			position: absolute;
-			left: -200px;
-			top: 0px;
-			padding: 2px 0px;
-			width: 200px;
-			height: 100%;
-			line-height: 42px;
-			overflow: hidden;
-			background-color: white;
-			text-align: center;
-			letter-spacing: 2px;
+		.filter-label{
+			line-height: 19px;
+			letter-spacing: 1px;
+			text-transform: lowercase;
+			margin: 0px 2px;
 		}
 
-		.star-active{
+		.filter-val{
 			color: $popItColor;
 		}
 
-		.star-replace{
-			border: 1pt solid transparent;
+		.value-holder{
+			position: absolute;
+			left: 0px;
+			top: -30px;
+			width: 100%;
+			height: 100%;
+			line-height: 19px;
+			overflow: hidden;
+			background-color: white;
+			letter-spacing: 2px;
+			-webkit-transition: all 0.2s linear;
+
+			ul{
+
+				li{
+					float: left;
+					text-align: center;
+					margin: 0px 6px;
+				}
+			}
+
+			input{
+				height: 11px;
+			}
 		}
 
-		.input-int{
-			width: 20px;
-			overflow: hidden;
+		.star-active,
+		.days-active,
+		.country-active{
+			color: $popItColor;
 		}
 
 		.fa-star:hover{
@@ -78,9 +96,16 @@ form.filter-form{
 			-webkit-transition: all 0.3s linear;
 		}
 
-		.star-holder{
-			left: 0px;
-			-webkit-transition: all 0.3s linear;
+		.value-holder{
+			top:0px;
+			-webkit-transition: all 0.2s linear;
+
+			ul{
+
+				li:hover{
+					color: $popItColor;
+				}
+			}
 		}
 
 		.star-replace{
