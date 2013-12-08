@@ -11,7 +11,9 @@ form.filter-form{
 	font-family: Calibri;
 
 	div.space{
-		margin: 12px 0px;
+		padding: 12px 0px;
+		position: relative;
+		display: inline-block;
 		color: $nonHover;
 		-webkit-transition: all 0.2s linear;
 
@@ -30,8 +32,21 @@ form.filter-form{
 		}
 
 		.star-holder{
-			height: 0px;
+			position: absolute;
+			left: -200px;
+			top: 0px;
+			padding: 2px 0px;
+			width: 200px;
+			height: 100%;
+			line-height: 42px;
 			overflow: hidden;
+			background-color: white;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+
+		.star-active{
+			color: $popItColor;
 		}
 
 		.star-replace{
@@ -41,6 +56,10 @@ form.filter-form{
 		.input-int{
 			width: 20px;
 			overflow: hidden;
+		}
+
+		.fa-star:hover{
+			color: $popItColor;
 		}
 	}
 
@@ -60,12 +79,11 @@ form.filter-form{
 		}
 
 		.star-holder{
-			height: 12px;
+			left: 0px;
 			-webkit-transition: all 0.3s linear;
 		}
 
 		.star-replace{
-			width: 0px;
 			border: 1pt solid transparent;
 		}
 	}
