@@ -1,13 +1,17 @@
 Headcam::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  resources :locations, controller: 'welcome'
+
   get "sessions/create"
   get "sessions/destroy"
   get "welcome/index"
+  get "welcome/new"
 
   match "/auth/:provider/callback" => "sessions#create", via: [:get, :post]
   match "/auth/failure", to: redirect('/'), via:[:get, :post]
   match "/signout" => "sessions#destroy", :as => :signout, via: [:get, :post]
+  match "/locations" => "welcome#new", via: [:get, :post]
 
   # You can have the root of your site routed with "root"
    root 'welcome#index'

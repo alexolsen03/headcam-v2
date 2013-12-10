@@ -1,3 +1,71 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$textColor: #888;
+$subtleColor: #cdcdcd;
+$popItColor: #FF4040;
+
+div.vid-data-wrapper{
+	width: 600px;
+	color: $textColor;
+
+	#vidHeader{
+		margin: 20px auto;
+		text-align: center;
+
+		#playArea{
+			padding: 30px;
+			display: inline-block;
+			text-align: center;
+			cursor: pointer;
+
+			#playIcon{
+				font-size: 46px;
+			}
+
+			h1{
+				margin-left: 30px;
+				display: inline-block;
+				font-size: 32px;
+				color: $textColor;
+			}
+		}
+
+		#playArea:hover{
+			color: $popItColor;
+			box-shadow: 0px 0px 8px $subtleColor;
+		}
+
+	}
+
+	#dataArea{
+		display: inline-block;
+		margin-left: 30px;
+
+		div.go-left{
+			line-height: 2;
+		}
+	}
+
+	#vidData{
+
+		ul{
+			margin: 30px;
+			padding: 6px 0px;
+			border-top: 1px dotted $subtleColor;
+			border-bottom: 1px dotted $subtleColor;
+
+			li{
+				display: inline-block;
+				width: 24%;
+				font-size: 11px;
+				font-family: Calibri;
+				color: $subtleColor;
+
+				span{
+					color: $popItColor;
+				}
+			}
+		}
+	}
+}
