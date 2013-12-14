@@ -9,7 +9,10 @@ class WelcomeController < ApplicationController
   	@hash = Gmaps4rails.build_markers(@locations) do |location, marker|
   		marker.lat location.latitude
   		marker.lng location.longitude
+      marker.title location.address
+      marker.json({:id => location.id, :title => location.address, :link => "/welcome/#{location.id}"})
   	end
+    
   end
 
   def new
