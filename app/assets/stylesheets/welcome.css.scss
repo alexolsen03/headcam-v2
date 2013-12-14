@@ -4,6 +4,45 @@
 $textColor: #888;
 $subtleColor: #cdcdcd;
 $popItColor: #FF4040;
+$compColor: #009999;
+
+div.loc-wrapper{
+	color: $subtleColor;
+	font-size: 18pt;
+	font-family: Calibri;
+	width: 600px;
+	
+	div.inner-block{
+		margin: 1px auto;
+		width: 400px;
+		text-align: left;
+		-webkit-transition: all 0.2s linear;
+		border: 1px solid $compColor;
+
+		div.country-block{
+			display: inline-block;
+			width: 30px;
+			padding: 5px;
+			background-color: $compColor;
+			color: #fff;
+
+			h1{
+				font-family: Calibri;
+			}
+		}
+
+		h1{
+			display: inline-block;
+		}
+	}
+
+	div.inner-block:hover{
+		padding-right: 10px;
+		-webkit-transition: all 0.2s linear;
+		cursor: pointer;
+		color: $popItColor;
+	}
+}
 
 div.vid-data-wrapper{
 	width: 600px;

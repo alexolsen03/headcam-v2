@@ -3,16 +3,18 @@ class WelcomeController < ApplicationController
   	if params[:search].present?
   		@locations = Location.near(params[:search])
   	else
-  		@locations = Location.all
-  	end
+  		gen_markers
+  	end  
+  end
 
-  	@hash = Gmaps4rails.build_markers(@locations) do |location, marker|
-  		marker.lat location.latitude
-  		marker.lng location.longitude
-      marker.title location.address
-      marker.json({:id => location.id, :title => location.address, :link => "/welcome/#{location.id}"})
-  	end
-    
+  def show
+    gen_markers
+    layout "welcome"
+
+    unless params[:vidId].nil?
+      @vidId = params[:vidId]
+      @location = Location.find(@vidId)
+    end
   end
 
   def new
@@ -32,4 +34,14 @@ class WelcomeController < ApplicationController
   	params.require(:location).permit( :address, :latitude, :longitude, :country_code)
   end
 
+  def gen_markers
+    @locations = Location.all
+
+    @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
+      marker.lat location.latitude
+      marker.lng location.longitude
+      marker.title location.address
+      marker.json({:id => location.id, :title => location.address, :link => "/welcome/show/#{location.id}/?vidId=#{location.id}"})
+    end
+  end
 end

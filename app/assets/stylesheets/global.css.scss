@@ -13,6 +13,14 @@ div.wrapper > div{
 	text-transform: lowercase;
 }
 
+.upsize{
+	text-transform: uppercase;
+}
+
+.right-padding{
+	padding: 40px 0px;
+}
+
 .go-left{
 	float: left;
 }
@@ -23,6 +31,10 @@ div.wrapper > div{
 
 .text-right{
 	text-align: right;
+}
+
+.text-center{
+	text-align: center;
 }
 
 .subtle-text{

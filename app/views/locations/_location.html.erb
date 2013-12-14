@@ -1,0 +1,14 @@
+<div class="text-center downsize loc-wrapper">
+	<div class="inner-block">
+		<div class="text-center upsize country-block">
+			<h1>
+				<% if location.country_code == "" %>
+					<%= 'CH' %>
+				<% else %>
+					<%= location.country_code %>
+				<% end %>
+			</h1>
+		</div>
+		<h1><%= location.address %></h1>
+	</div>
+</div>
