@@ -4,6 +4,9 @@
 <script type="text/javascript">
 	var mArr = new Array();
 	var markArr = new Array();
+	var icon1 = "/assets/marker.png";
+	var icon2 = "/assets/marker-active.png";
+
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
 		markers = handler.addMarkers(<%= raw @hash.to_json %>);
@@ -12,6 +15,7 @@
 
 		for(var i = 0; i < markers.length; i++){
 			marker = markers[i].getServiceObject();
+			marker.setIcon(icon1);
 			markArr[i] = marker;
 
 		  	markers_json = <%=raw @hash.to_json %>;
@@ -23,8 +27,16 @@
 
 		for(var n = 0; n < markArr.length; n++){
 			google.maps.event.addListener(markArr[n], 'click', function(){
-		  			redirect_to(mArr[this.getTitle()]);
-				});
+	  			redirect_to(mArr[this.getTitle()]);
+			});
+
+			google.maps.event.addListener(markArr[n], 'mouseover', function(){
+				this.setIcon(icon2);
+			});
+
+			google.maps.event.addListener(markArr[n], 'mouseout', function(){
+				this.setIcon(icon1);
+			});
 		}
 
 	});
