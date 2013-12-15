@@ -5,42 +5,107 @@ $textColor: #888;
 $subtleColor: #cdcdcd;
 $popItColor: #FF4040;
 $compColor: #009999;
+$popItDark: #555;
 
-div.loc-wrapper{
-	color: $subtleColor;
-	font-size: 18pt;
-	font-family: Calibri;
-	width: 600px;
-	
-	div.inner-block{
-		margin: 1px auto;
-		width: 400px;
-		text-align: left;
-		-webkit-transition: all 0.2s linear;
-		border: 1px solid $compColor;
+div.right-padding{
 
-		div.country-block{
-			display: inline-block;
-			width: 30px;
-			padding: 5px;
-			background-color: $compColor;
-			color: #fff;
+	h1{
+		margin-bottom: 10px;
+		color: #dedede;
+		font-size: 10pt;
+	}
 
-			h1{
-				font-family: Calibri;
+	div.vid-list-bands{
+
+		div.loc-wrapper{
+			color: $subtleColor;
+			font-size: 18pt;
+			font-family: Calibri;
+			width: 600px;
+			
+			div.inner-block{
+				float: right;
+				width: 500px;
+				text-align: left;
+				-webkit-transition: all 0.2s linear;
+				border-bottom: 1px solid $compColor;
+				border-right: 1px solid $compColor;
+
+				div.country-block{
+					display: inline-block;
+					width: 30px;
+					padding: 15px;
+					background-color: $compColor;
+
+					h1{
+						font-size: 14pt;
+						font-family: Calibri;
+						color: #fff;
+					}
+				}
+
+				div.data-block{
+					padding: 6px;
+					float: left;
+					width: 424px;
+
+					h1{
+						font-size: 12pt;
+						display: inline-block;
+					}
+
+					h2, span{
+						text-align: right;
+						font-size: 8pt;
+					}
+
+					span{
+						float: right;
+					}
+				}
+			}
+
+			div.inner-block:hover{
+				padding-right: 10px;
+				-webkit-transition: all 0.2s linear;
+				cursor: pointer;
+
+				div.data-block{
+					h1, h2, span{
+						color: $popItColor;
+					}
+				}
 			}
 		}
 
-		h1{
-			display: inline-block;
+		div.loc-wrapper:first-child div.inner-block{
+			border-top: 1px solid $compColor;
 		}
+
 	}
 
-	div.inner-block:hover{
-		padding-right: 10px;
-		-webkit-transition: all 0.2s linear;
-		cursor: pointer;
-		color: $popItColor;
+}
+
+div.go-back{
+	color: $textColor;
+	float: right;
+	padding: 10px 0px;
+
+	i, span{
+		color: $subtleColor;
+		font-size: 18pt;
+	}
+
+	span{
+		font-family: Calibri;
+	}
+}
+
+div.go-back:hover{
+	cursor: pointer;
+
+	i, span{
+		color: $popItDark;
 	}
 }
 
@@ -60,13 +125,14 @@ div.vid-data-wrapper{
 
 			#playIcon{
 				font-size: 46px;
+				color: $popItDark;
 			}
 
 			h1{
 				margin-left: 30px;
 				display: inline-block;
 				font-size: 32px;
-				color: $textColor;
+				color: $popItColor;
 			}
 		}
 
@@ -102,7 +168,7 @@ div.vid-data-wrapper{
 				color: $subtleColor;
 
 				span{
-					color: $popItColor;
+					color: $compColor;
 				}
 			}
 		}

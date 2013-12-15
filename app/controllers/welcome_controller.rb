@@ -9,7 +9,6 @@ class WelcomeController < ApplicationController
 
   def show
     gen_markers
-    layout "welcome"
 
     unless params[:vidId].nil?
       @vidId = params[:vidId]

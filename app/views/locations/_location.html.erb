@@ -1,6 +1,6 @@
-<div class="text-center downsize loc-wrapper">
+<div class="text-center loc-wrapper">
 	<div class="inner-block">
-		<div class="text-center upsize country-block">
+		<div class="text-center upsize country-block go-left">
 			<h1>
 				<% if location.country_code == "" %>
 					<%= 'CH' %>
@@ -9,6 +9,15 @@
 				<% end %>
 			</h1>
 		</div>
-		<h1><%= location.address %></h1>
+		<div class="data-block">
+			<h1><%= location.address %></h1>
+			<span>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+			</span>
+			<h2>alexolsen03</h2>
+		</div>
+		<div class="clearme"></div>
 	</div>
 </div>
