@@ -2,7 +2,7 @@
 	<div id="vidHeader">
 		<div id="playArea">
 			<i id="playIcon" class="fa fa-play-circle"></i>
-			<h1><%= @location.address %></h1>
+			<h1 id="addressTitle"><%= @location.address %></h1>
 		</div>
 	</div>
 	<div class="vid-data-wrapper">
@@ -15,8 +15,10 @@
 			<div class="clearme"></div>
 		</div>
 		<div class="go-back">
-			<i class="fa fa-angle-double-left"></i>
-			<span class="downsize">Back</span>
+			<%= link_to '/' do %>
+				<i class="fa fa-angle-double-left"></i>
+				<span class="downsize">Back</span>
+			<% end %>
 		</div>
 		<div class="clearme"></div>
 		<div id="vidData">

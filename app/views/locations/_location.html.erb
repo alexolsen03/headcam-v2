@@ -1,23 +1,25 @@
 <div class="text-center loc-wrapper">
-	<div class="inner-block">
-		<div class="text-center upsize country-block go-left">
-			<h1>
-				<% if location.country_code == "" %>
-					<%= 'CH' %>
-				<% else %>
-					<%= location.country_code %>
-				<% end %>
-			</h1>
+	<%= link_to '/welcome/show/' + location.id.to_s + '?vidId=' + location.id.to_s do %>
+		<div class="inner-block">
+			<div class="text-center upsize country-block go-left">
+				<h1>
+					<% if location.country_code == "" %>
+						<%= 'CH' %>
+					<% else %>
+						<%= location.country_code %>
+					<% end %>
+				</h1>
+			</div>
+			<div class="data-block">
+				<h1><%= location.address %></h1>
+				<span>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</span>
+				<h2>alexolsen03</h2>
+			</div>
+			<div class="clearme"></div>
 		</div>
-		<div class="data-block">
-			<h1><%= location.address %></h1>
-			<span>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-				<i class="fa fa-star"></i>
-			</span>
-			<h2>alexolsen03</h2>
-		</div>
-		<div class="clearme"></div>
-	</div>
+	<% end %>
 </div>

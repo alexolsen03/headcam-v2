@@ -39,6 +39,30 @@
 			});
 		}
 
+		$("div.inner-block").each(function(index){
+			var block = $(this);
+			$(block).hover(function(item){
+				var title = $(block).children()[1].innerHTML;
+				var marker = markArr[index];
+				marker.setIcon(icon2);
+			}, function(item){
+				var title = $(block).children()[1].innerHTML;
+				var marker = markArr[index];
+				marker.setIcon(icon1);
+			});
+		});
+
+		<% if !@location.nil?%>
+			if($("#addressTitle").text() != null){
+				var title = $("#addressTitle").text();
+				for(var i =0; i < markArr.length; i++){
+					if(markArr[i].getTitle() == title){
+						markArr[i].setIcon(icon2);
+					}
+				}
+			}
+		<% end %>
+
 	});
 
 	function redirect_to(url){
