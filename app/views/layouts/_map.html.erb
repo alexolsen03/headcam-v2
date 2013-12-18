@@ -28,6 +28,7 @@
 
 		for(var n = 0; n < markArr.length; n++){
 			google.maps.event.addListener(markArr[n], 'click', function(){
+				currentMarkerIndex = n;
 	  			redirect_to(mArr[this.getTitle()]);
 			});
 
@@ -42,18 +43,6 @@
 
 		//located in application.js
 		addLocationListListener();
-
-		// <% if !@location.nil?%>
-		// 	if($("#addressTitle").text() != null){
-		// 		var title = $("#addressTitle").text();
-		// 		for(var i =0; i < markArr.length; i++){
-		// 			if(markArr[i].getTitle() == title){
-		// 				markArr[i].setIcon(icon2);
-		// 				currentMarkerIndex = i;
-		// 			}
-		// 		}
-		// 	}
-		// <% end %>
 
 	});
 </script>

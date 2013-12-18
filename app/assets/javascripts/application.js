@@ -28,6 +28,9 @@ function addLocationListListener(){
 			var title = $(block).children()[1].innerHTML;
 			var marker = markArr[index];
 			marker.setIcon(icon1);
+			if($("#addressTitle").text() != ""){
+				marker.setIcon(icon2);
+			}
 		});
 	});
 }
@@ -42,4 +45,12 @@ function giveCurrentMarkerDefaultIcon(){
 	console.log('mark arr is ' + markArr.length);
 	console.log(markArr[currentMarkerIndex]);
 	markArr[currentMarkerIndex].setIcon(icon1);
+}
+
+function giveCurrentMarkerActiveIcon(){
+	console.log('giving active icon');
+	console.log('index is' + currentMarkerIndex);
+	console.log('mark arr is ' + markArr.length);
+	console.log(markArr[currentMarkerIndex]);
+	markArr[currentMarkerIndex].setIcon(icon2);
 }

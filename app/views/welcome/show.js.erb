@@ -1,9 +1,15 @@
-$("#yieldZone").html("<%= escape_javascript(render 'welcome/show') %>");
+$("#slideInZone").html("<%= escape_javascript(render 'welcome/show') %>");
 var title = $("#addressTitle").text();
+console.log("title is: " + title);
 for(var i =0; i < markArr.length; i++){
 	if(markArr[i].getTitle() == title){
 		markArr[i].setIcon(icon2);
 		currentMarkerIndex = i;
 	}
 }
+$("#slideInZone").css('right', '0px');
+console.log('index ' + currentMarkerIndex);
+console.log('before ' + markArr[currentMarkerIndex].getIcon());
 addLocationListListener();
+giveCurrentMarkerActiveIcon();
+console.log('after ' + markArr[currentMarkerIndex].getIcon());
