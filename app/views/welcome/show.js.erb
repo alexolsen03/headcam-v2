@@ -1,0 +1,9 @@
+$("#yieldZone").html("<%= escape_javascript(render 'welcome/show') %>");
+var title = $("#addressTitle").text();
+for(var i =0; i < markArr.length; i++){
+	if(markArr[i].getTitle() == title){
+		markArr[i].setIcon(icon2);
+		currentMarkerIndex = i;
+	}
+}
+addLocationListListener();

@@ -4,7 +4,13 @@ class WelcomeController < ApplicationController
   		@locations = Location.near(params[:search])
   	else
   		gen_markers
-  	end  
+  	end
+
+    respond_to do |format|
+      format.html{}
+      format.js{}
+    end
+
   end
 
   def show
@@ -13,6 +19,11 @@ class WelcomeController < ApplicationController
     unless params[:vidId].nil?
       @vidId = params[:vidId]
       @location = Location.find(@vidId)
+    end
+
+    respond_to do |format|
+      format.html{}
+      format.js{}
     end
   end
 

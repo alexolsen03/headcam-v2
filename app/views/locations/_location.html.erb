@@ -1,5 +1,5 @@
 <div class="text-center loc-wrapper">
-	<%= link_to '/welcome/show/' + location.id.to_s + '?vidId=' + location.id.to_s do %>
+	<%= link_to '/welcome/show/' + location.id.to_s + '?vidId=' + location.id.to_s, :remote => true do %>
 		<div class="inner-block">
 			<div class="text-center upsize country-block go-left">
 				<h1>

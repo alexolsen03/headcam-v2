@@ -16,3 +16,30 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+
+function addLocationListListener(){
+	$("div.inner-block").each(function(index){
+		var block = $(this);
+		$(block).hover(function(item){
+			var title = $(block).children()[1].innerHTML;
+			var marker = markArr[index];
+			marker.setIcon(icon2);
+		}, function(item){
+			var title = $(block).children()[1].innerHTML;
+			var marker = markArr[index];
+			marker.setIcon(icon1);
+		});
+	});
+}
+
+function redirect_to(url){
+	window.location = url;
+}
+
+function giveCurrentMarkerDefaultIcon(){
+	console.log('giving default icon');
+	console.log('index is' + currentMarkerIndex);
+	console.log('mark arr is ' + markArr.length);
+	console.log(markArr[currentMarkerIndex]);
+	markArr[currentMarkerIndex].setIcon(icon1);
+}
