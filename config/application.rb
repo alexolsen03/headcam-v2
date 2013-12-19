@@ -21,6 +21,6 @@ module Headcam
     # config.i18n.default_locale = :de
     config.assets.enabled = true
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-    config.assets.precompile += %w( *.css *.js )
+    #config.assets.precompile += %w( *.css *.js )
   end
 end
