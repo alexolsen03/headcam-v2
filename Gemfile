@@ -28,7 +28,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-#gem 'better_errors'
+gem 'better_errors'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
