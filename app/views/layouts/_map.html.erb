@@ -9,10 +9,34 @@
 	var currentMarkerIndex = 0;
 
 	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+	handler.buildMap({ provider: {}, center_on_user: true, internal: {id: 'map'}}, function(){
 		markers = handler.addMarkers(<%= raw @hash.to_json %>);
-		handler.bounds.extendWith(markers);
+		//handler.bounds.extendWith(markers);
+		handler.getMap().setZoom(3);
 		handler.fitMapToBounds();
+
+		if(navigator.geolocation) {
+	      success = function(position) {
+	        //console.log(position);
+	        //createMap(position.coords.latitude, position.coords.longitude);
+	        handler.map.centerOn([position.coords.latitude, position.coords.longitude]);
+	      };
+	      error = function() { 
+	      	//console.log("error");
+	      	//createMap(12.659493, 79.415412); 
+	      	handler.map.centerOn([12.659493, 79.415412]);
+	      }
+
+	      navigator.geolocation.getCurrentPosition(success, error);
+	    }
+
+
+		//var position = [32, 31];
+		//handler.map.centerOn(position);
+
+		// for(props in handler.getMap()){
+		// 	console.log(props + "\n");
+		// }
 
 		for(var i = 0; i < markers.length; i++){
 			marker = markers[i].getServiceObject();
@@ -43,6 +67,5 @@
 
 		//located in application.js
 		addLocationListListener();
-
 	});
 </script>
