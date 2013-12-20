@@ -39,6 +39,53 @@ div.headerfull{
 			top: 0px;
 			height: 100%;
 			line-height: 38px;
+
+			div#settings-wrapper{
+				display: inline-block;
+				position: relative;
+				padding: 0px 4px;
+
+				div#settings-menu{
+					display: none;
+				}
+
+				div#settings-menu.settings-active{
+					position: absolute;
+					z-index: 1;
+					right: 0px;
+					top: 38px;
+					width: 100px;
+					display: block;
+					background-color: #777;
+					color: #fff;
+					line-height: 1;
+
+					ul{
+						font-family: Calibri;
+
+						li{
+							padding: 8px 4px;
+						}
+
+						li:hover{
+							background-color: #aaa;
+						}
+					}
+				}
+			}
+
+			div#settings-wrapper:hover{
+				cursor: pointer;
+			}
+
+			div#settings-wrapper.active{
+				background-color: #777;
+				color: #fff;
+
+				i{
+					color: #fff;
+				}
+			}
 		}
 	}
 }

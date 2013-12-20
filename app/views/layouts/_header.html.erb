@@ -7,6 +7,18 @@
 				<%= link_to signout_path, id: "sign_out" do %>
 					<span class="downsize subtle-text small-text">Not <%= current_user.name %>?</span>
 				<% end %>
+				<div id="settings-wrapper" class="med-text">
+					<i id="settings" class="subtle-text fa fa-gear"></i>
+					<div id="settings-menu">
+						<ul class="text-center">
+							<li>
+								<%= link_to '/' do %> 
+									<span>Add Video</span>
+								<% end %>
+							</li>
+						</ul>
+					</div>
+				</div>
 			<% else %>
 				<span class="downsize subtle-text small-text">Not signed in?</span>
 				<%= link_to "/auth/facebook", :class => "soc-media-icon", id: "sign_in" do %>

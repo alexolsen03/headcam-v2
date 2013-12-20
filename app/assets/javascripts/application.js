@@ -54,3 +54,16 @@ function giveCurrentMarkerActiveIcon(){
 	console.log(markArr[currentMarkerIndex]);
 	markArr[currentMarkerIndex].setIcon(icon2);
 }
+
+function getVideoObjectFromList(title){
+	var returnItem = null;
+	$("div.inner-block").each(function(index){
+		var wrapper = $(this);
+		var outterDiv = $(this).children()[1];
+		if( $(outterDiv).children()[0].innerHTML == title){
+			console.log("RETURNING " + wrapper);
+			returnItem = wrapper;
+		}
+	});
+	return returnItem;
+}
